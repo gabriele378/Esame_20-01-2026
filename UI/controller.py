@@ -11,6 +11,17 @@ class Controller:
         pass
 
     def handle_connected_artists(self, e):
-        pass
+
+        value = self._view.txtNumAlbumMin
+        try:
+            if value > 0:
+                value = int(value)
+
+        except (ValueError, TypeError):
+            self._view.show_alert("Errore")
+
+
+
+
 
 
